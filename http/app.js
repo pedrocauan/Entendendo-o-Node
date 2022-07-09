@@ -7,8 +7,6 @@ const http = require("http")
 
 //http.createServer().listen(8080) /*Porta que o servidor vai rodar*/
 
-
-
 /*http.createServer(function(req, res){
     req -> variavel que guarda requisição
     res -> variavel que guarda a resposta

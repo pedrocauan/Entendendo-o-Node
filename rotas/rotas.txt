@@ -1,0 +1,14 @@
+- Rotas são caminhos que levam para um destino
+- Um destino pode ter varias rotas 
+
+home -> perfil -> assistir videos -> carrinho de compras
+
+usuario  > requisição > servidor > Todos os outros lugares do site
+
+Toda a rota criada precisa  precisa devolver uma resposta
+ --> res.send() <-- Devolve resposta
+
+Você só pode devolver uma resposta uma unica vez
+
+-- ROTAS SÃO CAMINHOS PARA RESPOSTAS DIFERENTES NA SUA APLICAÇÃO --
+
