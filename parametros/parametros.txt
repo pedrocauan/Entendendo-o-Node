@@ -1,0 +1,14 @@
+A tarefa das requisições é pegar dados de acesso do usuario
+
+--> O OBJETO REQ SÃO OS DADOS ENVIADOS PELO USUARIO <--
+
+
+--> O OBJETO RES SÃO OS DADOS DEVOLVIDAS PARA O USUARIO <--
+
+REQ => DADOS ENVIADOS PELO USUARIO
+RES => RESPOSTA QUE VAI SER ENVIADA PARA O USUARIO
+
+
+app.get("/user/:nome", function(req, res){
+    res.send(req.params.nome)
+})

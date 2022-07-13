@@ -12,3 +12,20 @@ Você só pode devolver uma resposta uma unica vez
 
 -- ROTAS SÃO CAMINHOS PARA RESPOSTAS DIFERENTES NA SUA APLICAÇÃO --
 
+
+Rotas podem receber parametros
+
+por exemplo: www.site.com/user
+  Dentro da rota user voce tem varios usuarios com o um parametro nome
+  esse parametro  leva para um usuario  com esse nome
+  ex:
+
+
+  app.get("/user/:nome", function(req, res){
+      res.send("Usuario pedrinho")
+  })
+
+
+---- SEMPRE FICAR ATENTO A UMA ROTA COM PARAMETROS ---
+-> Uma vez que uma rota  recebe um parametro, ela nao funciona sem esse parametro -<
+

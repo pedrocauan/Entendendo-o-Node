@@ -1,0 +1,3 @@
+nodemon -> ferramenta do node que carrega automaticamente o servidor
+npm install nodemon -g /*Instala  o nodemon globalmente para que qualquer um consiga usar*/
+
