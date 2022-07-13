@@ -1,5 +1,0 @@
-- Curso de NODEJS
-
-- Link do Curso: https://www.youtube.com/watch?v=bWSkUscBeZc&list=PLJ_KhUnlXUPtbtLwaxxUxHqvcNQndmI4B&index=4
-
-- Caso você esteja no Linux e vendo isto por um terminal, seja bem vindo. Espero que este repositório te ajude.
