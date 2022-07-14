@@ -21,6 +21,7 @@ const Postagem = sequelize.define("postagens", {
 
 })
 
+//Insere dado na tabela
 Postagem.create({
     titulo: "POSTAGEM 2",
     conteudo: "POSTAGEM NUMERO 2"
@@ -28,6 +29,16 @@ Postagem.create({
 
 //Sincroniza o model com o mysql
 //Postagem.sync({force:true}/*da a certeza que a tabela vai ser gerada*/)
+
+/* === RESULTADO NO TERMINAL == */
+
+// == Significa que criou a tabela ===
+/*
+Executing (default): DROP TABLE IF EXISTS `postagens`;
+Executing (default): CREATE TABLE IF NOT EXISTS `postagens` (`id` INTEGER NOT NULL auto_increment ,
+ `titulo` VARCHAR(255), `conteudo` TEXT, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, 
+ PRIMARY KEY (`id`)) ENGINE=InnoDB;
+*/
 
 const Usuario = sequelize.define("usuarios", {
     name: {
@@ -58,12 +69,4 @@ Usuario.create({
 
 
 
-/* === RESULTADO NO TERMINAL == */
 
-// == Significa que criou a tabela ===
-/*
-Executing (default): DROP TABLE IF EXISTS `postagens`;
-Executing (default): CREATE TABLE IF NOT EXISTS `postagens` (`id` INTEGER NOT NULL auto_increment ,
- `titulo` VARCHAR(255), `conteudo` TEXT, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, 
- PRIMARY KEY (`id`)) ENGINE=InnoDB;
-*/
