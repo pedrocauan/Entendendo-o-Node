@@ -1,15 +1,8 @@
 const express = require("express")
 const app = express()
-const Sequelize = require("sequelize")
 const bodyParse = require("body-parser")
 
 //Config
-    // Conexão com a database 
-        const sequelize = new Sequelize("handler", "philia", "1234", {
-            host: "localhost",
-            dialect: "mysql"
-        })
-
     // bodyParser
     app.use(bodyParse.urlencoded({extended: false}))
     app.use(bodyParse.json())
