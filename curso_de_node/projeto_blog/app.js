@@ -1,31 +1,25 @@
 const express = require("express")
 const app = express()
-const handlebars = require("express-handlebars")
 const Sequelize = require("sequelize")
 
-/* 
-
-    
-*/
-
-
 //Hanblebar é um renderizador de templates.
-
-//Config
-    //Template engine
-        /*== Resolve o B.O do handlebars == */
-        const exphbs  = require('express-handlebars');
-        let handle = exphbs.create({
-        defaultLayout: 'main'
-        });
-
-        app.engine("handlebars", handle.engine) //template padrao
-        app.set("viewengine", "handlebars")
 
     // Conexão com a database 
     const sequelize = new Sequelize("handler", "philia", "1234", {
         host: "localhost",
         dialect: "mysql"
+    })
+
+// Rotas
+    //Formulário de cadastro 
+    app.get("/cad", function(req, res) {
+        //Dirname = diretorio absoluto (pasta q ta o app.js)
+        const form = `${__dirname}/html/form.html`
+        res.sendFile(form)
+    })
+
+    app.post("/add", function(req,res){
+        res.send("Dados recebidos com sucesso")
     })
 
 app.listen(8082, function(){
