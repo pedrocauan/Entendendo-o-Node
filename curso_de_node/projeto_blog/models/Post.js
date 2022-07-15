@@ -1,4 +1,4 @@
-const db = require("./db")
+const db = require("./db") //Linka com a database
 
 //Cria tabela de Postagens
 const Post = db.sequelize.define("posts", {
@@ -12,3 +12,5 @@ const Post = db.sequelize.define("posts", {
     }
 })
 
+
+module.exports = Post

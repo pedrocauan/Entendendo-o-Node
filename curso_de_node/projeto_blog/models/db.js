@@ -7,7 +7,14 @@ const sequelize = new Sequelize("postapp", "philia", "1234", {
     dialect: "mysql" /*tipo de banco de dados*/
 })
 
-//Da acesso da db ao arquivi Post.js
+//Ve se ele se conectou na database
+sequelize.authenticate().then(function() {
+    console.log("Database Conectada")
+}).catch(function(err) {
+    console.log(`Falha ao se conectar na database ${err}`)
+})
+
+//Da acesso da db ao arquivo Post.js
 module.exports = {
     Sequelize: Sequelize,
     sequelize: sequelize

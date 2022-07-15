@@ -1,6 +1,7 @@
 const express = require("express")
 const app = express()
 const bodyParse = require("body-parser")
+const Post = require("./models/Post")
 
 //Config
     // bodyParser
@@ -16,9 +17,21 @@ const bodyParse = require("body-parser")
     })
 
     app.post("/add", function(req,res){
-        res.send(`Titulo: ${req.body.title}</br>Texto: ${req.body.content}`)
+        //Cria Postagem no banco de dados
+        Post.create({
+            title: req.body.title,
+            content: req.body.content
+        }).then(function(){
+            console.log("Postagem feita")
+        }).catch(function(err) {
+            console.log(`Erro na postagem ${err}`)
+        })
+
+        //Resposta pro usuarios
+        res.send("Postagem feita")
+
     })
 
 app.listen(8082, function(){
-    console.log("Rodou o servidor")
+    console.log(`Rodou o servidor`)
 })
