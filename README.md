@@ -1,6 +1,3 @@
 # Entendendo-o-Node
-Estudando o NodeJS
 
-[X] - Primeiro Código.
-
-Cannot GET / ->
+## Repositório para estudos em NODEJS
