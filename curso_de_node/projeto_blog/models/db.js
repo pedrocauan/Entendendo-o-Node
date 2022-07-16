@@ -8,11 +8,11 @@ const sequelize = new Sequelize("postapp", "philia", "1234", {
 })
 
 //Ve se ele se conectou na database
-sequelize.authenticate().then(function() {
+/*sequelize.authenticate().then(function() {
     console.log("Database Conectada")
 }).catch(function(err) {
     console.log(`Falha ao se conectar na database ${err}`)
-})
+})*/
 
 //Da acesso da db ao arquivo Post.js
 module.exports = {

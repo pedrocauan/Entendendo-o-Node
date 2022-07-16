@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <title>Home</title>
+    <style>
+        :root {
+            /* rosa -> #FFC0CB  amarelo ->#FEDA84*/
+            --bg-color: #FFC0CB;
+            --window-color: #d6d6d6;
+            --text-color: #43457F;
+            /*rosa->#FF9B83 vermelho -> red */
+            --title-color: red;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-size: 1.6rem;
+            font-family: 'Edu VIC WA NT Beginner', cursive;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        .main-content {
+            padding: 3rem;
+        }
+
+
+        /*Cor do fundo*/
+        .bg-color {
+            background-color: var(--bg-color);
+        }
+
+        .main {
+            min-height: 100vh;
+            margin: 0 auto;
+
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .home {
+            background-color: var(--window-color);
+            /*sombra interna e externa*/
+            box-shadow: 2rem 2rem 0 0 rgba(0, 0, 0, 0.8), inset 1rem 1rem 1rem 2rem rgba(159, 159, 159, 0.5);
+            border: 1rem solid black;
+            max-width: 30rem;
+            
+        }
+
+        .home-content {
+            flex-direction: column;
+            gap: 4rem;
+            text-align: center;
+
+        }
+
+        .home h1 {
+            font-weight: bold;
+            font-size: 4rem;
+            text-transform: capitalize;
+        }
+        .home .button {
+            min-width: 90%;
+            max-width: 30rem;
+            text-decoration: none;
+            color:  blue;
+            text-shadow:0.1rem 0.1rem rgba(0, 0, 0, 0.5);
+            background-color: var(--bg-color);
+            box-shadow: 0.5rem 0.5rem 0 0 rgba(0, 0, 0, 0.8);
+            border: 1rem solid black;
+            text-transform: capitalize;
+        }
+        .home .button a{
+            display: block;
+            font-size: 3rem;
+            width: 100%;
+            height: 100%;
+            padding: 2rem;
+            text-align: center;
+            text-decoration: none;
+            color: blue;
+            font-weight: 500;
+            text-shadow: 0.1rem 0.1rem black;
+        }
+
+    </style>
+</head>
+
+<body>
+    <main class="main main-content bg-color center">
+        <section class="home home-content main-content center">
+            <h1>Crie sua Postagem</h1>
+            <div class="button center">
+                <a  href="cad">criar</a>
+            </div>
+            <div class="button center">
+                <a href="posts">postagens</a>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
